@@ -1,0 +1,145 @@
+2018-06-08 17:16:52 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2018-06-08 17:17:03 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2018-06-08 17:17:08 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2018-06-08 17:17:13 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2018-06-08 17:17:26 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2018-06-08 17:17:26 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2018-06-08 17:17:39 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2018-06-08 17:17:42 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2018-06-08 17:17:56 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2018-06-08 17:17:56 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2018-06-08 17:17:59 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2018-06-08 17:23:57 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2018-06-08 17:23:57 Warning: Warning (2): Invalid argument supplied for foreach() in [/home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 235]
+Request URL: /schedules/add
+Referer URL: http://localhost:8765/monitors
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 159
+Cake\Core\Plugin::{closure}() - ROOT/vendor/cakephp/debug_kit/config/bootstrap.php, line 41
+Cake\View\Widget\SelectBoxWidget::_renderOptions() - CORE/src/View/Widget/SelectBoxWidget.php, line 235
+Cake\View\Widget\SelectBoxWidget::_renderContent() - CORE/src/View/Widget/SelectBoxWidget.php, line 166
+Cake\View\Widget\SelectBoxWidget::render() - CORE/src/View/Widget/SelectBoxWidget.php, line 116
+Cake\View\Helper\FormHelper::widget() - CORE/src/View/Helper/FormHelper.php, line 2844
+Cake\View\Helper\FormHelper::select() - CORE/src/View/Helper/FormHelper.php, line 2142
+Cake\View\Helper\FormHelper::_getInput() - CORE/src/View/Helper/FormHelper.php, line 1310
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1203
+include - APP/Template/Schedules/add.ctp, line 26
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1240
+Cake\View\View::_render() - CORE/src/View/View.php, line 1201
+Cake\View\View::render() - CORE/src/View/View.php, line 803
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 777
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 228
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 158
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 98
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 98
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2018-06-08 17:26:45 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2018-06-08 17:26:46 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2018-06-08 17:27:04 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2018-06-08 17:27:04 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2018-06-08 17:27:04 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'agendamento_db.schedules_students' doesn't exist
+Request URL: /schedules
+Referer URL: http://localhost:8765/schedules/add
+Stack Trace:
+#0 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'schedules_stude...', Array, Object(Cake\Database\Schema\TableSchema))
+#1 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(63): Cake\Database\Schema\Collection->describe('schedules_stude...', Array)
+#2 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/ORM/Table.php(548): Cake\Database\Schema\CachedCollection->describe('schedules_stude...')
+#3 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/ORM/Query.php(270): Cake\ORM\Table->getSchema()
+#4 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/ORM/Association/BelongsToMany.php(1143): Cake\ORM\Query->addDefaultTypes(Object(Cake\ORM\Table))
+#5 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/ORM/Association/BelongsToMany.php(581): Cake\ORM\Association\BelongsToMany->_appendJunctionJoin(Object(Cake\ORM\Query), Array)
+#6 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/ORM/Association/Loader/SelectLoader.php(167): Cake\ORM\Association\BelongsToMany->Cake\ORM\Association\{closure}()
+#7 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/ORM/Association/Loader/SelectWithPivotLoader.php(90): Cake\ORM\Association\Loader\SelectLoader->_buildQuery(Array)
+#8 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/ORM/Association/Loader/SelectLoader.php(124): Cake\ORM\Association\Loader\SelectWithPivotLoader->_buildQuery(Array)
+#9 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/ORM/Association/BelongsToMany.php(585): Cake\ORM\Association\Loader\SelectLoader->buildEagerLoader(Array)
+#10 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/ORM/EagerLoader.php(700): Cake\ORM\Association\BelongsToMany->eagerLoader(Array)
+#11 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/ORM/Query.php(1125): Cake\ORM\EagerLoader->loadExternal(Object(Cake\ORM\Query), Object(Cake\Database\Statement\BufferedStatement))
+#12 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(309): Cake\ORM\Query->_execute()
+#13 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/ORM/Query.php(1073): Cake\ORM\Query->_all()
+#14 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Datasource/Paginator.php(186): Cake\ORM\Query->all()
+#15 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Controller/Component/PaginatorComponent.php(200): Cake\Datasource\Paginator->paginate(Object(App\Model\Table\SchedulesTable), Array, Array)
+#16 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Controller/Controller.php(872): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\SchedulesTable), Array)
+#17 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/src/Controller/SchedulesController.php(26): Cake\Controller\Controller->paginate(Object(App\Model\Table\SchedulesTable))
+#18 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Controller/Controller.php(596): App\Controller\SchedulesController->index()
+#19 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#20 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\SchedulesController))
+#21 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Http/BaseApplication.php(228): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(158): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#25 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#28 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#29 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#30 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Http/Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/webroot/index.php(40): Cake\Http\Server->run()
+#32 {main}
+
+
+2018-06-08 17:27:18 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2018-06-08 17:27:33 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2018-06-08 17:27:33 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'agendamento_db.schedules_students' doesn't exist
+Request URL: /schedules
+Referer URL: http://localhost:8765/schedules/add
+Stack Trace:
+#0 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'schedules_stude...', Array, Object(Cake\Database\Schema\TableSchema))
+#1 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(63): Cake\Database\Schema\Collection->describe('schedules_stude...', Array)
+#2 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/ORM/Table.php(548): Cake\Database\Schema\CachedCollection->describe('schedules_stude...')
+#3 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/ORM/Query.php(270): Cake\ORM\Table->getSchema()
+#4 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/ORM/Association/BelongsToMany.php(1143): Cake\ORM\Query->addDefaultTypes(Object(Cake\ORM\Table))
+#5 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/ORM/Association/BelongsToMany.php(581): Cake\ORM\Association\BelongsToMany->_appendJunctionJoin(Object(Cake\ORM\Query), Array)
+#6 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/ORM/Association/Loader/SelectLoader.php(167): Cake\ORM\Association\BelongsToMany->Cake\ORM\Association\{closure}()
+#7 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/ORM/Association/Loader/SelectWithPivotLoader.php(90): Cake\ORM\Association\Loader\SelectLoader->_buildQuery(Array)
+#8 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/ORM/Association/Loader/SelectLoader.php(124): Cake\ORM\Association\Loader\SelectWithPivotLoader->_buildQuery(Array)
+#9 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/ORM/Association/BelongsToMany.php(585): Cake\ORM\Association\Loader\SelectLoader->buildEagerLoader(Array)
+#10 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/ORM/EagerLoader.php(700): Cake\ORM\Association\BelongsToMany->eagerLoader(Array)
+#11 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/ORM/Query.php(1125): Cake\ORM\EagerLoader->loadExternal(Object(Cake\ORM\Query), Object(Cake\Database\Statement\BufferedStatement))
+#12 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(309): Cake\ORM\Query->_execute()
+#13 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/ORM/Query.php(1073): Cake\ORM\Query->_all()
+#14 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Datasource/Paginator.php(186): Cake\ORM\Query->all()
+#15 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Controller/Component/PaginatorComponent.php(200): Cake\Datasource\Paginator->paginate(Object(App\Model\Table\SchedulesTable), Array, Array)
+#16 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Controller/Controller.php(872): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\SchedulesTable), Array)
+#17 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/src/Controller/SchedulesController.php(26): Cake\Controller\Controller->paginate(Object(App\Model\Table\SchedulesTable))
+#18 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Controller/Controller.php(596): App\Controller\SchedulesController->index()
+#19 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#20 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\SchedulesController))
+#21 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Http/BaseApplication.php(228): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(158): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#25 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#28 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#29 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#30 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/vendor/cakephp/cakephp/src/Http/Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 /home/alunoifpe/Área de Trabalho/avaliação/agendamento_monitoria/webroot/index.php(40): Cake\Http\Server->run()
+#32 {main}
+
+
+2018-06-08 17:28:31 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2018-06-08 17:28:32 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2018-06-08 17:28:32 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2018-06-08 17:28:32 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2018-06-08 17:28:33 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2018-06-08 17:33:38 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2018-06-08 17:33:40 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2018-06-08 17:33:44 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2018-06-08 17:36:53 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2018-06-08 17:36:54 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2018-06-08 17:37:09 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2018-06-08 17:37:09 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2018-06-08 17:37:14 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2018-06-08 17:37:14 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
