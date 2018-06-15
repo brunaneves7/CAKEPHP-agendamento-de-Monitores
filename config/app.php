@@ -68,7 +68,7 @@ return [
      *   You should treat it as extremely sensitive data.
      */
     'Security' => [
-        'salt' => env('SECURITY_SALT', 'e83be8c28348c5c09e9ce6e5f63b6d7c1ba11b0be0f9f275b7bba9b49b3be0c7'),
+        'salt' => env('SECURITY_SALT', '65197439b4e00a5d450c08473e81adf7395fc9ac1fdbaf8faef5ae24cb93ebe1'),
     ],
 
     /**
@@ -196,18 +196,14 @@ return [
      */
     'EmailTransport' => [
         'default' => [
-            'className' => 'Mail',
-            /*
-             * The following keys are used in SMTP transports:
-             */
-            'host' => 'localhost',
-            'port' => 25,
-            'timeout' => 30,
-            'username' => null,
-            'password' => null,
+            'className' => 'Smtp',
+            // The following keys are used in SMTP transports
+            'host' => 'ssl://smtp.gmail.com',
+            'port' => 465,
+            'username' => 'testezerozerosete@gmail.com',
+            'password' => '@lunoifp3',
             'client' => null,
             'tls' => null,
-            'url' => env('EMAIL_TRANSPORT_DEFAULT_URL', null),
         ],
     ],
 
@@ -256,7 +252,7 @@ return [
             //'port' => 'non_standard_port_number',
             'username' => 'root',
             'password' => 'ifpe',
-            'database' => 'agendamento_db',
+            'database' => 'agblog_db',
             /*
              * You do not need to set this flag to use full utf-8 encoding (internal default since CakePHP 3.6).
              */

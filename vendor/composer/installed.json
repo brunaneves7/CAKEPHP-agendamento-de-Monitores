@@ -276,17 +276,17 @@
     },
     {
         "name": "cakephp/cakephp",
-        "version": "3.6.4",
-        "version_normalized": "3.6.4.0",
+        "version": "3.6.5",
+        "version_normalized": "3.6.5.0",
         "source": {
             "type": "git",
             "url": "https://github.com/cakephp/cakephp.git",
-            "reference": "614f906e001f5e98174d1b273119931859bd7f39"
+            "reference": "9d26dcaa80739d24674062604bb3796e72023580"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/cakephp/cakephp/zipball/614f906e001f5e98174d1b273119931859bd7f39",
-            "reference": "614f906e001f5e98174d1b273119931859bd7f39",
+            "url": "https://api.github.com/repos/cakephp/cakephp/zipball/9d26dcaa80739d24674062604bb3796e72023580",
+            "reference": "9d26dcaa80739d24674062604bb3796e72023580",
             "shasum": ""
         },
         "require": {
@@ -324,7 +324,7 @@
             "ext-openssl": "To use Security::encrypt() or have secure CSRF token generation.",
             "lib-ICU": "The intl PHP library, to use Text::transliterate() or Text::slug()"
         },
-        "time": "2018-05-21T00:47:41+00:00",
+        "time": "2018-06-10T01:39:25+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -364,17 +364,17 @@
     },
     {
         "name": "cakephp/cakephp-codesniffer",
-        "version": "3.0.4",
-        "version_normalized": "3.0.4.0",
+        "version": "3.0.5",
+        "version_normalized": "3.0.5.0",
         "source": {
             "type": "git",
             "url": "https://github.com/cakephp/cakephp-codesniffer.git",
-            "reference": "d6018c825a436e728ef0a8e29b966e52f7c3feda"
+            "reference": "7f467fee00fd016b62cf8c85a57750ab2a895e81"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/cakephp/cakephp-codesniffer/zipball/d6018c825a436e728ef0a8e29b966e52f7c3feda",
-            "reference": "d6018c825a436e728ef0a8e29b966e52f7c3feda",
+            "url": "https://api.github.com/repos/cakephp/cakephp-codesniffer/zipball/7f467fee00fd016b62cf8c85a57750ab2a895e81",
+            "reference": "7f467fee00fd016b62cf8c85a57750ab2a895e81",
             "shasum": ""
         },
         "require": {
@@ -384,7 +384,7 @@
         "require-dev": {
             "phpunit/phpunit": "<6.0"
         },
-        "time": "2018-06-08T08:35:49+00:00",
+        "time": "2018-06-09T16:01:01+00:00",
         "type": "phpcodesniffer-standard",
         "installation-source": "dist",
         "autoload": {
@@ -470,17 +470,17 @@
     },
     {
         "name": "cakephp/debug_kit",
-        "version": "3.16.1",
-        "version_normalized": "3.16.1.0",
+        "version": "3.16.3",
+        "version_normalized": "3.16.3.0",
         "source": {
             "type": "git",
             "url": "https://github.com/cakephp/debug_kit.git",
-            "reference": "388e9ab0bab2bcb5984556312ae599905bec284d"
+            "reference": "aabaecb032f7e91d2c4df9c79806992cf60e07ee"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/cakephp/debug_kit/zipball/388e9ab0bab2bcb5984556312ae599905bec284d",
-            "reference": "388e9ab0bab2bcb5984556312ae599905bec284d",
+            "url": "https://api.github.com/repos/cakephp/debug_kit/zipball/aabaecb032f7e91d2c4df9c79806992cf60e07ee",
+            "reference": "aabaecb032f7e91d2c4df9c79806992cf60e07ee",
             "shasum": ""
         },
         "require": {
@@ -498,7 +498,7 @@
         "suggest": {
             "ext-pdo_sqlite": "DebugKit needs to store panel data in a database. SQLite is simple and easy to use."
         },
-        "time": "2018-05-23T15:26:13+00:00",
+        "time": "2018-06-11T02:33:52+00:00",
         "type": "cakephp-plugin",
         "installation-source": "dist",
         "autoload": {
@@ -1528,17 +1528,17 @@
     },
     {
         "name": "psy/psysh",
-        "version": "v0.9.5",
-        "version_normalized": "0.9.5.0",
+        "version": "v0.9.6",
+        "version_normalized": "0.9.6.0",
         "source": {
             "type": "git",
             "url": "https://github.com/bobthecow/psysh.git",
-            "reference": "0951e91ac04ca28cf317f3997a0adfc319e80106"
+            "reference": "4a2ce86f199d51b6e2524214dc06835e872f4fce"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/bobthecow/psysh/zipball/0951e91ac04ca28cf317f3997a0adfc319e80106",
-            "reference": "0951e91ac04ca28cf317f3997a0adfc319e80106",
+            "url": "https://api.github.com/repos/bobthecow/psysh/zipball/4a2ce86f199d51b6e2524214dc06835e872f4fce",
+            "reference": "4a2ce86f199d51b6e2524214dc06835e872f4fce",
             "shasum": ""
         },
         "require": {
@@ -1561,7 +1561,7 @@
             "ext-readline": "Enables support for arrow-key history navigation, and showing and manipulating command history.",
             "hoa/console": "A pure PHP readline implementation. You'll want this if your PHP install doesn't already support readline or libedit."
         },
-        "time": "2018-06-02T16:39:22+00:00",
+        "time": "2018-06-10T17:57:20+00:00",
         "bin": [
             "bin/psysh"
         ],

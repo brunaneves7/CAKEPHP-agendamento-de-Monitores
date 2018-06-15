@@ -35,7 +35,7 @@ class MonitorsTable extends Table
 
         $this->setTable('monitors');
         $this->setDisplayField('name');
-        $this->setPrimaryKey('id');
+        $this->setPrimaryKey('user_id');
 
         $this->hasMany('Schedules', [
             'foreignKey' => 'monitor_id'
@@ -51,8 +51,8 @@ class MonitorsTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
-            ->integer('id')
-            ->allowEmpty('id', 'create');
+            ->integer('user_id')
+            ->allowEmpty('user_id', 'create');
 
         $validator
             ->scalar('name')
@@ -62,16 +62,6 @@ class MonitorsTable extends Table
         $validator
             ->email('email')
             ->allowEmpty('email');
-
-        $validator
-            ->scalar('username')
-            ->maxLength('username', 20)
-            ->allowEmpty('username');
-
-        $validator
-            ->scalar('password')
-            ->maxLength('password', 20)
-            ->allowEmpty('password');
 
         $validator
             ->scalar('discipline')
@@ -91,7 +81,6 @@ class MonitorsTable extends Table
     public function buildRules(RulesChecker $rules)
     {
         $rules->add($rules->isUnique(['email']));
-        $rules->add($rules->isUnique(['username']));
 
         return $rules;
     }

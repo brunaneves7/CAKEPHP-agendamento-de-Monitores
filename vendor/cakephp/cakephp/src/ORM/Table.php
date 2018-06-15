@@ -960,13 +960,13 @@ class Table implements RepositoryInterface, EventListenerInterface, EventDispatc
     /**
      * Returns an association object configured for the specified alias if any.
      *
-     * @deprecated 3.6.0 Use getAssociation() and Table::hasAssocation() instead.
+     * @deprecated 3.6.0 Use getAssociation() and Table::hasAssociation() instead.
      * @param string $name the alias used for the association.
      * @return \Cake\ORM\Association|null Either the association or null.
      */
     public function association($name)
     {
-        deprecationWarning('Use Table::getAssociation() and Table::hasAssocation() instead.');
+        deprecationWarning('Use Table::getAssociation() and Table::hasAssociation() instead.');
 
         return $this->findAssociation($name);
     }
@@ -1675,13 +1675,13 @@ class Table implements RepositoryInterface, EventListenerInterface, EventDispatc
      */
     public function findOrCreate($search, callable $callback = null, $options = [])
     {
-        $options += [
+        $options = new ArrayObject($options + [
             'atomic' => true,
             'defaults' => true,
-        ];
+        ]);
 
         $entity = $this->_executeTransaction(function () use ($search, $callback, $options) {
-            return $this->_processFindOrCreate($search, $callback, $options);
+            return $this->_processFindOrCreate($search, $callback, $options->getArrayCopy());
         }, $options['atomic']);
 
         if ($entity && $this->_transactionCommitted($options['atomic'], true)) {
@@ -1880,7 +1880,7 @@ class Table implements RepositoryInterface, EventListenerInterface, EventDispatc
      *
      * @param \Cake\Datasource\EntityInterface $entity
      * @param array $options
-     * @return bool|\Cake\Datasource\EntityInterface|mixed
+     * @return \Cake\Datasource\EntityInterface|false
      * @throws \Cake\ORM\Exception\RolledbackTransactionException If the transaction is aborted in the afterSave event.
      */
     public function save(EntityInterface $entity, $options = [])

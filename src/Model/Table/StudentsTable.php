@@ -35,7 +35,7 @@ class StudentsTable extends Table
 
         $this->setTable('students');
         $this->setDisplayField('name');
-        $this->setPrimaryKey('id');
+        $this->setPrimaryKey('user_id');
 
         $this->hasMany('Schedules', [
             'foreignKey' => 'student_id'
@@ -51,8 +51,8 @@ class StudentsTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
-            ->integer('id')
-            ->allowEmpty('id', 'create');
+            ->integer('user_id')
+            ->allowEmpty('user_id', 'create');
 
         $validator
             ->scalar('name')
@@ -62,16 +62,6 @@ class StudentsTable extends Table
         $validator
             ->email('email')
             ->allowEmpty('email');
-
-        $validator
-            ->scalar('username')
-            ->maxLength('username', 20)
-            ->allowEmpty('username');
-
-        $validator
-            ->scalar('password')
-            ->maxLength('password', 20)
-            ->allowEmpty('password');
 
         return $validator;
     }
@@ -86,7 +76,6 @@ class StudentsTable extends Table
     public function buildRules(RulesChecker $rules)
     {
         $rules->add($rules->isUnique(['email']));
-        $rules->add($rules->isUnique(['username']));
 
         return $rules;
     }

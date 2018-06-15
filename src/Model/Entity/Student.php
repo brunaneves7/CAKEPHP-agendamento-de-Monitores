@@ -6,11 +6,9 @@ use Cake\ORM\Entity;
 /**
  * Student Entity
  *
- * @property int $id
+ * @property int $user_id
  * @property string $name
  * @property string $email
- * @property string $username
- * @property string $password
  *
  * @property \App\Model\Entity\Schedule[] $schedules
  */
@@ -29,17 +27,6 @@ class Student extends Entity
     protected $_accessible = [
         'name' => true,
         'email' => true,
-        'username' => true,
-        'password' => true,
         'schedules' => true
-    ];
-
-    /**
-     * Fields that are excluded from JSON versions of the entity.
-     *
-     * @var array
-     */
-    protected $_hidden = [
-        'password'
     ];
 }

@@ -17,11 +17,9 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('user_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('name') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('email') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('username') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('password') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('discipline') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
@@ -29,16 +27,14 @@
         <tbody>
             <?php foreach ($monitors as $monitor): ?>
             <tr>
-                <td><?= $this->Number->format($monitor->id) ?></td>
+                <td><?= $this->Number->format($monitor->user_id) ?></td>
                 <td><?= h($monitor->name) ?></td>
                 <td><?= h($monitor->email) ?></td>
-                <td><?= h($monitor->username) ?></td>
-                <td><?= h($monitor->password) ?></td>
                 <td><?= h($monitor->discipline) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $monitor->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $monitor->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $monitor->id], ['confirm' => __('Are you sure you want to delete # {0}?', $monitor->id)]) ?>
+                    <?= $this->Html->link(__('View'), ['action' => 'view', $monitor->user_id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $monitor->user_id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $monitor->user_id], ['confirm' => __('Are you sure you want to delete # {0}?', $monitor->user_id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

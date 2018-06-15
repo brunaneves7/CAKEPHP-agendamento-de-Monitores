@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Mailer\Email;
 
 /**
  * Schedules Controller
@@ -51,12 +52,21 @@ class SchedulesController extends AppController
      */
     public function add()
     {
-        $this->Schedules->status = "Pendente";
+        //if ($this->Auth->user('role')=== "student") {
+            echo "dsfdsf";
+        //}
         $schedule = $this->Schedules->newEntity();
         if ($this->request->is('post')) {
             $schedule = $this->Schedules->patchEntity($schedule, $this->request->getData());
+            $schedule->user_id=$this->Auth->user('id');
             if ($this->Schedules->save($schedule)) {
                 $this->Flash->success(__('The schedule has been saved.'));
+                $estudante = $this->Schedules->Students->get($schedule->id);
+                $email = new Email('default');
+        $email->from(['remetente@example.com' => 'Meu Site'])
+            ->to("brunarafaellaneves@gmail.com")
+            ->subject('Bem Vindo')
+            ->send('Sua monitoria foi agendada com sucesso!');
 
                 return $this->redirect(['action' => 'index']);
             }
@@ -65,8 +75,8 @@ class SchedulesController extends AppController
         $students = $this->Schedules->Students->find('list', ['limit' => 200]);
         $monitors = $this->Schedules->Monitors->find('list', ['limit' => 200]);
         $this->set(compact('schedule', 'students', 'monitors'));
-    }
-
+        
+        }
     /**
      * Edit method
      *

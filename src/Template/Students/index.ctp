@@ -17,26 +17,22 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('user_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('name') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('email') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('username') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('password') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($students as $student): ?>
             <tr>
-                <td><?= $this->Number->format($student->id) ?></td>
+                <td><?= $this->Number->format($student->user_id) ?></td>
                 <td><?= h($student->name) ?></td>
                 <td><?= h($student->email) ?></td>
-                <td><?= h($student->username) ?></td>
-                <td><?= h($student->password) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $student->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $student->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $student->id], ['confirm' => __('Are you sure you want to delete # {0}?', $student->id)]) ?>
+                    <?= $this->Html->link(__('View'), ['action' => 'view', $student->user_id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $student->user_id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $student->user_id], ['confirm' => __('Are you sure you want to delete # {0}?', $student->user_id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

@@ -7,10 +7,10 @@ use Cake\ORM\Entity;
  * Schedule Entity
  *
  * @property int $id
- * @property string $student_id
- * @property string $monitor_id
- * @property \Cake\I18n\FrozenTime $date_start_time
- * @property \Cake\I18n\FrozenTime $date_end_time
+ * @property int $student_id
+ * @property int $monitor_id
+ * @property \Cake\I18n\FrozenTime $date_hour_init
+ * @property \Cake\I18n\FrozenTime $date_hour_end
  * @property string $status
  *
  * @property \App\Model\Entity\Student $student
@@ -31,8 +31,8 @@ class Schedule extends Entity
     protected $_accessible = [
         'student_id' => true,
         'monitor_id' => true,
-        'date_start_time' => true,
-        'date_end_time' => true,
+        'date_hour_init' => true,
+        'date_hour_end' => true,
         'status' => true,
         'student' => true,
         'monitor' => true

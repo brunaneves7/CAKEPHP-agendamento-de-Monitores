@@ -338,7 +338,8 @@ class Response implements ResponseInterface
         'vtt' => 'text/vtt',
         'mkv' => 'video/x-matroska',
         'pkpass' => 'application/vnd.apple.pkpass',
-        'ajax' => 'text/html'
+        'ajax' => 'text/html',
+        'bmp' => 'image/bmp'
     ];
 
     /**
@@ -1364,6 +1365,10 @@ class Response implements ResponseInterface
      */
     public function sharable($public = null, $time = null)
     {
+        deprecationWarning(
+            'Response::sharable() is deprecated. ' .
+            'Use withSharable() instead.'
+        );
         if ($public === null) {
             $public = array_key_exists('public', $this->_cacheDirectives);
             $private = array_key_exists('private', $this->_cacheDirectives);
@@ -1421,11 +1426,16 @@ class Response implements ResponseInterface
      * a good candidate to be fetched from a shared cache (like in a proxy server).
      * If called with no parameters, this function will return the current max-age value if any
      *
+     * @deprecated 3.6.5 Use withSharedMaxAge() instead.
      * @param int|null $seconds if null, the method will return the current s-maxage value
      * @return int|null
      */
     public function sharedMaxAge($seconds = null)
     {
+        deprecationWarning(
+            'Response::sharedMaxAge() is deprecated. ' .
+            'Use withSharedMaxAge() instead.'
+        );
         if ($seconds !== null) {
             $this->_cacheDirectives['s-maxage'] = $seconds;
             $this->_setCacheControl();
@@ -1461,11 +1471,16 @@ class Response implements ResponseInterface
      * a good candidate to be fetched from the local (client) cache.
      * If called with no parameters, this function will return the current max-age value if any
      *
+     * @deprecated 3.6.5 Use withMaxAge() instead.
      * @param int|null $seconds if null, the method will return the current max-age value
      * @return int|null
      */
     public function maxAge($seconds = null)
     {
+        deprecationWarning(
+            'Response::maxAge() is deprecated. ' .
+            'Use withMaxAge() instead.'
+        );
         if ($seconds !== null) {
             $this->_cacheDirectives['max-age'] = $seconds;
             $this->_setCacheControl();

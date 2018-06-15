@@ -39,10 +39,12 @@ class SchedulesTable extends Table
         $this->setPrimaryKey('id');
 
         $this->belongsTo('Students', [
-            'foreignKey' => 'student_id'
+            'foreignKey' => 'student_id',
+            'joinType' => 'INNER'
         ]);
         $this->belongsTo('Monitors', [
-            'foreignKey' => 'monitor_id'
+            'foreignKey' => 'monitor_id',
+            'joinType' => 'INNER'
         ]);
     }
 
@@ -59,12 +61,12 @@ class SchedulesTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
-            ->dateTime('date_start_time')
-            ->allowEmpty('date_start_time');
+            ->dateTime('date_hour_init')
+            ->allowEmpty('date_hour_init');
 
         $validator
-            ->dateTime('date_end_time')
-            ->allowEmpty('date_end_time');
+            ->dateTime('date_hour_end')
+            ->allowEmpty('date_hour_end');
 
         $validator
             ->scalar('status')

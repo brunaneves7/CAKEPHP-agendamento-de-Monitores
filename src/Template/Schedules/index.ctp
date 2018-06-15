@@ -8,10 +8,6 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Schedule'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Students'), ['controller' => 'Students', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Student'), ['controller' => 'Students', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Monitors'), ['controller' => 'Monitors', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Monitor'), ['controller' => 'Monitors', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="schedules index large-9 medium-8 columns content">
@@ -22,8 +18,8 @@
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('student_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('monitor_id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('date_start_time') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('date_end_time') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('date_hour_init') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('date_hour_end') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('status') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
@@ -32,10 +28,10 @@
             <?php foreach ($schedules as $schedule): ?>
             <tr>
                 <td><?= $this->Number->format($schedule->id) ?></td>
-                <td><?= $schedule->has('student') ? $this->Html->link($schedule->student->name, ['controller' => 'Students', 'action' => 'view', $schedule->student->id]) : '' ?></td>
-                <td><?= $schedule->has('monitor') ? $this->Html->link($schedule->monitor->name, ['controller' => 'Monitors', 'action' => 'view', $schedule->monitor->id]) : '' ?></td>
-                <td><?= h($schedule->date_start_time) ?></td>
-                <td><?= h($schedule->date_end_time) ?></td>
+                <td><?= $this->Number->format($schedule->student_id) ?></td>
+                <td><?= $this->Number->format($schedule->monitor_id) ?></td>
+                <td><?= h($schedule->date_hour_init) ?></td>
+                <td><?= h($schedule->date_hour_end) ?></td>
                 <td><?= h($schedule->status) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $schedule->id]) ?>
